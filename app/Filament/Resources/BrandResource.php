@@ -23,7 +23,7 @@ use App\Filament\Resources\BrandResource\RelationManagers;
 class BrandResource extends Resource
 {
     protected static ?string $model = Brands::class;
-
+    protected static ?string $recordTitleAttribute = 'name';
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Form $form): Form
