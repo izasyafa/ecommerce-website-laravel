@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>{{ $title ?? 'IzzaCode' }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        @vite('resources/css/app.css', 'resources/js/app.js')
+    <title>{{ $title ?? 'IzzaCode' }}</title>
 
-        @livewireStyles()
-    </head>
+    @vite('resources/css/app.css', 'resources/js/app.js')
 
-    <body class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-sans antialiased">
-        @livewire('partials.navbar')
+    @livewireStyles()
+</head>
 
-        <main>
-            {{ $slot }}
-        </main>
+<body class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-100 font-sans antialiased">
+    @livewire('partials.navbar')
 
-        @livewire('partials.footer')
-        @livewireScripts
-    </body>
+    <main>
+        {{ $slot }}
+    </main>
+
+    @livewire('partials.footer')
+    @livewireScripts
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <x-livewire-alert::scripts />
+</body>
+
 </html>

@@ -224,7 +224,7 @@
 
                 @foreach ($brands as $brand)
                     <a class="flex flex-col group bg-white border shadow-sm rounded-xl overflow-hidden hover:shadow-lg focus:outline-none focus:shadow-lg transition dark:bg-neutral-900 dark:border-neutral-700 dark:shadow-neutral-700/70"
-                        href="#">
+                        href="/products?selected_brands[0]={{ $brand->id }}">
                         <div class="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
                             <img class="size-full absolute top-0 start-0 object-contain group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl"
                                 src="{{ asset('storage/' . $brand->image) }}" alt="Card Image">
@@ -271,7 +271,7 @@
 
                 @foreach ($categories as $category)
                     <a class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                        href="#">
+                        href="/products?selected_categories[0]={{ $category->id }}">
                         <div class="p-4 md:p-5">
                             <div class="flex justify-between items-center">
                                 <div class="flex items-center">
